@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "254029d3-6b5c-4d9e-a6c7-025359ff40b1",
+		"name": "02-so_Book接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "获取分类列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/book/category",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取分类下的小说列表 _ 分页查询",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pageSize\": 18,\r\n    \"pageNum\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/book/category/1",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取小说的详情信息",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/book/category/1/book/258",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"category",
+						"1",
+						"book",
+						"258"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "模糊匹配查询小说列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}/book/search/1",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"search",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": ""
+		}
+	]
+}
